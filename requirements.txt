@@ -1,0 +1,9 @@
+
+pyspark==3.5.7
+streamlit
+plotly
+pandas
+numpy
+matplotlib
+reportlab
+pytest

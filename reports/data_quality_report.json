@@ -1,0 +1,18 @@
+{
+  "input_file": "Online Retail.csv",
+  "original_rows": 541909,
+  "rows_after_deduplication": 536641,
+  "exact_duplicates_removed": 5268,
+  "final_rows": 536641,
+  "columns_after_cleaning": 16,
+  "missing_description": 1454,
+  "missing_customer_id": 135037,
+  "invalid_invoice_date": 0,
+  "negative_quantity_rows": 10587,
+  "negative_unit_price_rows": 2,
+  "missing_critical_fields": 0,
+  "null_revenue_rows": 0,
+  "processing_time_seconds": 15.14,
+  "output_format": "Parquet",
+  "output_path": "C:\\Users\\A\\Desktop\\DATAVERSE_NEXUS\\data\\processed\\online_retail_parquet"
+}

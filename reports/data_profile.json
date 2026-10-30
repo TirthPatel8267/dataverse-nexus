@@ -1,0 +1,51 @@
+{
+  "file_name": "Online Retail.csv",
+  "total_rows": 541909,
+  "total_columns": 8,
+  "duplicate_rows": 5268,
+  "missing_values": {
+    "InvoiceNo": 0,
+    "StockCode": 0,
+    "Description": 1454,
+    "Quantity": 0,
+    "InvoiceDate": 0,
+    "UnitPrice": 0,
+    "CustomerID": 135080,
+    "Country": 0
+  },
+  "schema": [
+    {
+      "column": "InvoiceNo",
+      "data_type": "StringType()"
+    },
+    {
+      "column": "StockCode",
+      "data_type": "StringType()"
+    },
+    {
+      "column": "Description",
+      "data_type": "StringType()"
+    },
+    {
+      "column": "Quantity",
+      "data_type": "IntegerType()"
+    },
+    {
+      "column": "InvoiceDate",
+      "data_type": "StringType()"
+    },
+    {
+      "column": "UnitPrice",
+      "data_type": "DoubleType()"
+    },
+    {
+      "column": "CustomerID",
+      "data_type": "IntegerType()"
+    },
+    {
+      "column": "Country",
+      "data_type": "StringType()"
+    }
+  ],
+  "profiling_time_seconds": 12.99
+}
