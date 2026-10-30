@@ -1,151 +1,341 @@
-<div align="center">🚀 DATAVERSE NEXUS
-The Intelligent Big Data Discovery Platform
-From raw transactional data to actionable business intelligence.
+ <div align="center">
 
+# 🚀 DATAVERSE NEXUS
 
+### The Intelligent Big Data Discovery Platform
 
+**From Raw Transactional Data to Actionable Business Intelligence**
 
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
+![PySpark](https://img.shields.io/badge/Apache%20Spark-PySpark-orange?logo=apachespark&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-red?logo=streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Visualization-Plotly-3F4F75?logo=plotly&logoColor=white)
+![Testing](https://img.shields.io/badge/Testing-pytest-blue?logo=pytest&logoColor=white)
 
-Overview · Features · Architecture · Screenshots · Installation · Demo
-</div>📌 Overview
-DATAVERSE NEXUS is an interactive Big Data Analytics platform built to profile, clean, process, analyze, and visualize retail transaction data.
+[Overview](#-overview) • [Features](#-key-features) • [Architecture](#-system-architecture) • [Screenshots](#-dashboard-screenshots) • [Installation](#-installation-and-setup) • [Demo](#-demo-and-presentation)
 
-The project demonstrates an end-to-end analytics workflow: raw CSV ingestion, data profiling, PySpark-based cleaning, Parquet storage, business analysis, and interactive exploration through a Streamlit dashboard. It also provides data-quality reporting and business recommendations to help users interpret the dataset.
+</div>
 
-The project uses the Online Retail dataset as its working example.
-📊 Dataset at a glance
-Metric	Value
-Raw records	541,909
-Raw columns	8
-Exact duplicate rows removed	5,268
-Cleaned records	536,641
-Cleaned columns	16
-Source file	Online Retail.csv
+---
 
+## 📌 Overview
 
-Data interpretation: Negative quantities may represent product returns or credit adjustments. They should not automatically be treated as data-entry errors. Revenue and other business metrics should be interpreted using the transaction filters applied by the analysis.
+**DATAVERSE NEXUS** is an interactive Big Data Analytics platform designed to profile, clean, process, analyze, and visualize large-scale retail transaction data.
 
-✨ Key features
-- Data profiling: Inspect dataset dimensions, column information, missing values, and duplicate records.
-- PySpark data processing: Run the data preparation and cleaning workflow using Apache Spark.
-- Parquet output: Store processed data in a columnar format for downstream analysis.
-- Interactive dashboard: Explore key metrics and analyze sales, products, and countries.
-- Data quality monitoring: Review missing values, duplicates, and other quality indicators.
-- Performance analytics: Explore revenue trends and business performance indicators.
-- Intelligence and alerts: Review unusual patterns and analytical signals.
-- Business recommendations: View data-informed recommendations and recommendation history.
-- Executive reporting: Generate an executive-style PDF report from the dashboard.
-🖥️ Dashboard screenshots
-The screenshots below should be captured from the running application. Replace or update the images whenever the dashboard changes.
-<div align="center">Overview
-<img src="assets/screenshots/overview.png" alt="DATAVERSE NEXUS overview dashboard" width="900">Sales analysis
-<img src="assets/screenshots/sales-analysis.png" alt="DATAVERSE NEXUS sales analysis dashboard" width="900">Data quality
-<img src="assets/screenshots/data-quality.png" alt="DATAVERSE NEXUS data quality dashboard" width="900">Business recommendations
-<img src="assets/screenshots/recommendations.png" alt="DATAVERSE NEXUS business recommendations dashboard" width="900"></div>🏗️ System architecture
-The following diagram summarizes the main processing and presentation flow.
+The platform combines a PySpark data processing pipeline with an interactive Streamlit dashboard, providing data quality monitoring, business intelligence, advanced visualizations, and actionable business recommendations.
+
+It demonstrates an end-to-end Big Data workflow, transforming raw transactional data into meaningful business insights.
+
+### 🎯 Project Objectives
+
+- Process and analyze large volumes of retail transaction data.
+- Identify missing values, duplicate records, and data quality issues.
+- Transform raw data into structured, analysis-ready datasets.
+- Generate meaningful business insights through interactive dashboards.
+- Support data-driven decision-making through analytical recommendations.
+
+## 📊 Dataset Overview
+
+This project uses the **Online Retail dataset**.
+
+| Metric | Value |
+|---|---:|
+| Original records | 541,909 |
+| Original columns | 8 |
+| Duplicate records removed | 5,268 |
+| Cleaned records | 536,641 |
+| Cleaned columns | 16 |
+| Dataset | Online Retail CSV |
+
+**Data interpretation:** Negative quantities may represent product returns or credit adjustments. They should not automatically be treated as data-entry errors.
+
+## ✨ Key Features
+
+### 1. Data Profiling
+- Dataset overview and structural analysis.
+- Column data types and missing-value analysis.
+- Duplicate record identification.
+- Data profiling reports.
+
+### 2. Big Data Processing
+- PySpark-based data cleaning pipeline.
+- Data transformation and preprocessing.
+- Duplicate record handling.
+- Processed data stored in Apache Parquet format.
+
+### 3. Interactive Analytics Dashboard
+- Overview dashboard with business KPIs.
+- Sales analysis and revenue trends.
+- Product performance analysis.
+- Country-wise sales analysis.
+- Interactive Plotly visualizations.
+
+### 4. Data Quality Monitoring
+- Missing-value monitoring.
+- Duplicate record analysis.
+- Data quality reports.
+- Data validation and quality indicators.
+
+### 5. Business Intelligence
+- Performance analytics.
+- Intelligence and alerts.
+- Business recommendations.
+- Recommendation history.
+
+### 6. Executive Reporting
+- Generate executive-style PDF reports.
+- Present important business metrics.
+- Summarize analytical findings.
+
+## 🖥️ Dashboard Screenshots
+
+### Overview Dashboard
+
+![Overview Dashboard](assets/screenshots/overview.png)
+
+### Sales Analysis
+
+![Sales Analysis](assets/screenshots/sales-analysis.png)
+
+### Data Quality
+
+![Data Quality](assets/screenshots/data-quality.png)
+
+### Business Recommendations
+
+![Business Recommendations](assets/screenshots/recommendations.png)
+
+## 🏗️ System Architecture
+
 ```mermaid
 flowchart TD
-    A["Online Retail CSV"] --> B["Data profiling"]
-    B --> C["PySpark data cleaning"]
-    C --> D["Processed Parquet data"]
-    D --> E["Analytics and business logic"]
-    E --> F["Streamlit dashboard"]
-    E --> G["Data quality reports"]
-    E --> H["Business recommendations"]
-    F --> I["Interactive Plotly visualizations"]
-    F --> J["Executive PDF report"]
+    A["Online Retail CSV Dataset"]
+    B["Data Profiling"]
+    C["PySpark Data Cleaning"]
+    D["Processed Parquet Dataset"]
+    E["Analytics and Business Logic"]
+    F["Streamlit Dashboard"]
+    G["Data Quality Reports"]
+    H["Business Recommendations"]
+    I["Interactive Plotly Charts"]
+    J["Executive PDF Report"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+    E --> H
+    F --> I
+    F --> J
 ```
-🧰 Technology stack
-Layer	Technologies
-Programming language	Python
-Big data processing	Apache Spark, PySpark
-Data manipulation	Pandas, NumPy
-Dashboard	Streamlit
-Interactive visualization	Plotly
-Reporting and plotting	ReportLab, Matplotlib
-Data storage	CSV, Apache Parquet
-Testing	pytest
 
+## 🧰 Technology Stack
 
-📁 Project structure
+| Category | Technologies |
+|---|---|
+| Programming Language | Python |
+| Big Data Processing | Apache Spark, PySpark |
+| Data Manipulation | Pandas, NumPy |
+| Dashboard Development | Streamlit |
+| Data Visualization | Plotly |
+| Reporting | ReportLab, Matplotlib |
+| Data Storage | CSV, Apache Parquet |
+| Testing | pytest |
+| Development Environment | VS Code |
+
+## 📁 Project Structure
+
+```text
 DATAVERSE_NEXUS/
 │
-├── app.py                         # Streamlit dashboard
-├── requirements.txt               # Python dependencies
-├── README.md                      # Project documentation
+├── app.py
+├── requirements.txt
+├── README.md
 ├── .gitignore
 │
 ├── engine/
 │   ├── __init__.py
-│   ├── pipeline.py                # Data profiling / pipeline
-│   ├── cleaning.py                # PySpark cleaning workflow
+│   ├── pipeline.py
+│   ├── cleaning.py
 │   ├── business_recommendations.py
 │   └── recommendation_history.py
 │
 ├── data/
-│   ├── raw/                       # Source dataset
-│   └── processed/                 # Processed Parquet output
+│   ├── raw/
+│   └── processed/
 │
-├── reports/                       # Generated profile and quality reports
+├── reports/
+│   ├── data_profile.json
+│   ├── data_quality_report.json
+│   └── recommendation_history.json
 │
 ├── assets/
-│   └── screenshots/               # Dashboard screenshots
+│   └── screenshots/
+│       ├── overview.png
+│       ├── sales-analysis.png
+│       ├── data-quality.png
+│       └── recommendations.png
 │
-└── tests/                          # Automated tests
-⚙️ Installation and setup
-1. Clone the repository
-git clone https://github.com/TirthPatel8267/dataverse-nexus.git
-cd dataverse-nexus
-2. Create a virtual environment
-Windows PowerShell:
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-3. Install dependencies
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-4. Configure Java and Hadoop on Windows
-The local PySpark setup requires a compatible Java installation. This project was developed with Java 17.
+└── tests/
+    ├── test_business_recommendations.py
+    ├── test_cleaning.py
+    ├── test_pipeline.py
+    └── test_recommendation_history.py
+```
 
-Set the following environment variables in the current PowerShell session. Replace the Java path if Java 17 is installed elsewhere.
+## ⚙️ Installation and Setup
+
+### Prerequisites
+
+Make sure you have installed:
+
+- Python 3.11
+- Java Development Kit (JDK) 17
+- Git
+- Visual Studio Code (recommended)
+
+For Windows, PySpark may also require compatible Hadoop utilities (`winutils.exe` and `hadoop.dll`).
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/TirthPatel8267/dataverse-nexus.git
+```
+
+```bash
+cd dataverse-nexus
+```
+
+### Step 2: Create a Virtual Environment
+
+```powershell
+py -3.11 -m venv .venv
+```
+
+Activate it:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### Step 3: Install Dependencies
+
+```bash
+python -m pip install --upgrade pip
+```
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4: Configure Java and Hadoop
+
+Configure the environment variables in PowerShell.
+
+Replace the Java path with your actual Java 17 installation directory.
+
+```powershell
 $env:JAVA_HOME = "C:\path\to\jdk-17"
 $env:HADOOP_HOME = "C:\hadoop"
 $env:Path = "$env:JAVA_HOME\bin;$env:HADOOP_HOME\bin;$env:Path"
-For a Windows Spark environment, compatible Hadoop utility files such as winutils.exe and hadoop.dll may also be required. Do not commit these binaries to this repository.
-5. Add the source dataset
-Place the Online Retail CSV file at:
-data/raw/Online Retail.csv
-If the dataset is not included in your local clone, obtain it from the original dataset source and place it at the path above before running the pipeline.
-6. Run the data pipeline
-Run the project modules from the repository root:
-python -m engine.pipeline
-python -m engine.cleaning
-7. Launch the Streamlit dashboard
-streamlit run app.py
-Open the local URL printed in the terminal (usually http://localhost:8501).
-8. Run the tests
-python -m pytest -q
-🎬 Demo and presentation
-- Demo video: Add a link to your recorded dashboard walkthrough here.
-- Project presentation: Add the final five-slide PowerPoint file or a link here.
-- Executive report: Add a reviewed sample PDF report here, if it is appropriate to share.
-Suggested two-minute demo flow:
-1. Open the dashboard and introduce the project.
-2. Show the Overview page and key metrics.
-3. Explore Sales Analysis and Product Analysis.
-4. Demonstrate the Data Quality page.
-5. Show Business Recommendations and the PDF reporting feature.
-🧪 Testing
-Automated tests are maintained in the tests/ directory. Run the test suite using:
-python -m pytest -q
-Use the latest test output as the source of truth when reporting the test count or test status.
-⚠️ Notes and limitations
-- The raw CSV and processed Parquet files can make a Git repository large. Include them only if their size and redistribution terms are suitable. Otherwise, document how to obtain or regenerate them.
-- Generated reports may contain dataset-specific results. Review them before publishing.
-- Recommendations and anomaly indicators are analytical outputs; they are not guaranteed predictions.
-- The Java and Hadoop configuration shown above is for a local Windows setup. Paths and requirements may differ on other operating systems.
-📄 License
-No license has been added yet. Unless a license is included, others do not automatically receive permission to reuse, modify, or distribute this project. Add a LICENSE file if you intend to publish it under an open-source license.
-<div align="center">DATAVERSE NEXUS — Turning data into discovery.
+```
 
-Built as a Big Data Analytics academic project.
+### Step 5: Prepare the Dataset
+
+Ensure the source dataset is available at:
+
+```text
+data/raw/Online Retail.csv
+```
+
+### Step 6: Run the Data Pipeline
+
+```bash
+python -m engine.pipeline
+```
+
+```bash
+python -m engine.cleaning
+```
+
+### Step 7: Launch the Dashboard
+
+```bash
+streamlit run app.py
+```
+
+Open the local URL provided by Streamlit, usually:
+
+```text
+http://localhost:8501
+```
+
+### Step 8: Run Automated Tests
+
+```bash
+python -m pytest -q
+```
+
+## 🎬 Demo and Presentation
+
+**Project Demonstration:** Add your recorded dashboard walkthrough link here.
+
+**PowerPoint Presentation:** Add your final five-slide project presentation here.
+
+**Executive PDF Report:** Add a reviewed sample executive report here.
+
+### Suggested Demo Flow
+
+1. Introduce DATAVERSE NEXUS.
+2. Demonstrate the Overview dashboard.
+3. Explore Sales and Product Analysis.
+4. Explain Data Quality monitoring.
+5. Demonstrate Business Recommendations.
+6. Show Executive PDF Report generation.
+
+## 🧪 Testing
+
+The project includes automated tests in the `tests/` directory.
+
+Execute the test suite using:
+
+```bash
+python -m pytest -q
+```
+
+## 🔮 Future Enhancements
+
+- Real-time data ingestion and processing.
+- Predictive sales analytics using Machine Learning.
+- Advanced customer segmentation.
+- Automated business intelligence alerts.
+- Cloud-based deployment.
+- Interactive forecasting and trend prediction.
+
+## ⚠️ Notes and Limitations
+
+- Large CSV and Parquet files may increase repository size.
+- Review dataset redistribution permissions before publishing raw data.
+- Generated reports should be checked before public sharing.
+- Recommendations and anomaly indicators are analytical outputs, not guaranteed predictions.
+- Java and Hadoop configuration may vary across operating systems.
+
+## 📄 License
+
+No open-source license has been selected for this project yet. Add a `LICENSE` file if you wish to specify reuse and distribution permissions.
+
+---
+
+<div align="center">
+
+### 🚀 DATAVERSE NEXUS
+
+**Turning Data Into Discovery.**
+
+Developed as a Big Data Analytics Academic Project.
+
+⭐ If you find this project interesting, consider giving the repository a star!
+
 </div>
